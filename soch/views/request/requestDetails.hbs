@@ -1,0 +1,67 @@
+<h2 class="text-center">{{request.alias}}</h2>
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
+
+
+
+        <form action="/request/request/{{request.alias}}/update" method="POST" enctype="">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/request">Request</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{request.requestsubjects}}</li>
+                </ol>
+            </nav>
+
+            <div class="form-row mb-2">
+                <label for="requestsubject" class="col-sm-2 col-form-label">Request Subject</label>
+                <div class="col-sm-4">
+                    <input type="text" name="requestsubjects" class="form-control" id="requestsubject"
+                        value="{{request.requestsubjects}}" readonly>
+                </div>
+            </div>
+
+            {{!-- <div class="form-row mb-2">
+                <label for="alias" class="col-sm-2 col-form-label">Alias</label>
+                <div class="col-sm-4">
+                    <input type="text" name="alias" class="form-control" id="alias" value="{{request.alias}}" readonly>
+                </div>
+            </div> --}}
+
+            <div class="form-row mb-2">
+                <label for="department" class="col-sm-2 col-form-label">Department</label>
+                <div class="col-sm-4">
+                    <input type="text" name="department" class="form-control" id="department"
+                        value="{{request.department}}" readonly>
+
+                    {{!-- <select id="department" name="department" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>IT</option>
+                        <option>HR</option>
+                        <option>PROJECT</option>
+                        <option>OTHERS</option>
+                    </select> --}}
+                </div>
+            </div>
+
+            <div class="form-row mb-2">
+                <label for="description" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-4">
+                    <textarea name="description" id="" cols="61" rows="6">{{request.description}}</textarea>
+                </div>
+            </div>
+
+            {{!-- <div class="form-row mb-2">
+                <label for="uploadfile" class="col-sm-2 col-form-label">Upload File</label>
+                <div class="col-sm-4">
+                    <input type="file" class="form-control-file" id="uploadfile">
+                </div>
+            </div> --}}
+
+            <button type="submit" class="btn btn-success">Update</button>
+
+        </form>
+    </div>
+</main>

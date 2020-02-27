@@ -1,0 +1,73 @@
+<h1 class="text-center">Manual Bill</h1>
+
+<form action="/billdetails/manualBill/create-new" method="POST">
+
+    <div class="form-row mb-2">
+        <div class="form-group col-md-4">
+            <label for="customername" name="customername">Customer Name</label>
+            <input type="text" name="customername" class="form-control" id="customername">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="customernumber">Customer Number</label>
+            <input type="number" name="customernumber" class="form-control" id="customernumber">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="reason">Reason</label>
+            <select id="reason" name="reason" class="form-control">
+                <option selected>Choose...</option>
+                <option>Promo</option>
+                <option>Exchange</option>
+                <option>System</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row mb-2">
+        <div class="form-group col-md-4">
+            <label for="icode">Icode</label>
+            <input type="text" name="icode" class="form-control" id="icode">
+            <input type="text" name="icode" class="form-control" id="icode">
+            <input type="text" name="icode" class="form-control" id="icode">
+            <input type="text" name="icode" class="form-control" id="icode">
+            <input type="text" name="icode" class="form-control" id="icode">
+
+
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="hsn">HSN Code</label>
+            <input type="number" name="hsn" class="form-control" id="hsn">
+            <input type="number" name="hsn" class="form-control" id="hsn">
+            <input type="number" name="hsn" class="form-control" id="hsn">
+            <input type="number" name="hsn" class="form-control" id="hsn">
+            <input type="number" name="hsn" class="form-control" id="hsn">
+
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="qty">Qty</label>
+            <input type="number" name="qty" class="form-control" id="qty">
+            <input type="number" name="qty" class="form-control" id="qty">
+            <input type="number" name="qty" class="form-control" id="qty">
+            <input type="number" name="qty" class="form-control" id="qty">
+            <input type="number" name="qty" class="form-control" id="qty">
+
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="value">Value</label>
+            <input type="number" name="value" class="form-control" id="value">
+            <input type="number" name="value" class="form-control" id="value">
+            <input type="number" name="value" class="form-control" id="value">
+            <input type="number" name="value" class="form-control" id="value">
+            <input type="number" name="value" class="form-control" id="value">
+
+
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-danger">Cancel</button>
+
+</form>
