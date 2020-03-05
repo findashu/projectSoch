@@ -30,7 +30,18 @@ router.post("/request/create-new", function(req, res, next) {
       res.redirect("/request");
     })
     .catch(err => next(err));
+
+  RequestService.updateIdRequest(bodydata)
+    .then(dt => {
+      console.log("id updted");
+    })
+    .catch(err => next(err));
 });
+
+// router.post("/request/create-new", function(req, res, next) {
+//     RequestService.updateIdRequest(id)
+//     .then(dt => )
+// })
 
 router.get("/request/:alias", function(req, res, next) {
   let alias = req.params.alias;

@@ -3,7 +3,8 @@
 <form>
     <div class="form-row">
         <div class="form-group col-md-2">
-            <a href="/request/request/create-new" class="btn btn-primary p-2 mb-2">Support Request</a>
+            <a href="/request/request/create-new" class="btn btn-primary btn-outline-dark p-2 mb-2">New Support
+                Request</a>
         </div>
         <div class="form-group col-md-4">
             <nav aria-label="breadcrumb">
@@ -27,12 +28,14 @@
                 <th scope="col">Department</th>
                 <th scope="col">Desc</th>
                 <th scope="col">Created On</th>
+                {{!-- <th scope="col">Status</th> --}}
+
 
 
             </tr>
         </thead>
         <tbody>
-            {{#each request}}
+            {{#each request }}
             <tr>
                 <td>{{this.id}}</td>
                 <td> <a href="/request/request/{{this.alias}}">{{this.alias}}</a></td>
@@ -41,9 +44,6 @@
                 <td>{{this.department}}</td>
                 <td>{{this.description}}</td>
                 <td>{{this.createdOn}}</td>
-
-
-
 
             </tr>
             {{/each}}

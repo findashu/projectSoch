@@ -4,8 +4,14 @@ module.exports.index = (req, res) => {
   });
 };
 
-module.exports.alterationdetails = (req, res) => {
-  res.render("alteration/alterationdetails", {
-    title: "Alteration Bill Details"
+// module.exports.alterationdetails = (req, res) => {
+//   res.render("alteration/alterationdetails", {
+//     title: "Alteration Bill Details"
+//   });
+// };
+
+module.exports.chat = (req, res) => {
+  res.render("chat", {
+    title: "Chat"
   });
 };

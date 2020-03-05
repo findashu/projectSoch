@@ -20,6 +20,18 @@ module.exports.createRequest = bd => {
   });
 };
 
+module.exports.updateIdRequest = id => {
+  return new Promise((resolve, reject) => {
+    Request.findByIdAndUpdate(
+      { id: Object(id) },
+      { new: true },
+      { $set: Number, default: 1, $inc: { id: 1 } }
+    )
+      .then(dt => resolve(dt))
+      .catch(err => reject(err));
+  });
+};
+
 module.exports.requestDetails = alias => {
   return new Promise((resolve, reject) => {
     Request.findOne({ alias: alias })

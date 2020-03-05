@@ -1,11 +1,14 @@
 const express = require("express");
 const hbs = require("hbs");
 const mongoose = require("mongoose");
+const ptp = require("pdf-to-printer");
+const dateformat = require("date-format");
 
 const middleware = require("./middleware/appmiddleware");
 const routes = require("./routes/index");
 const requestRouter = require("./routes/requestRoutes");
 const manualbillRouter = require("./routes/manualbillRoutes");
+const alterationRouter = require("./routes/alterationRoutes");
 
 const app = express();
 
@@ -31,10 +34,10 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/request", requestRouter);
 app.use("/billdetails", manualbillRouter);
+app.use("/alterationdetails", alterationRouter);
 
 app.get("/", routes.index);
-
-app.get("/alterationdetails", routes.alterationdetails);
+// app.get("/chat", routes.chat);
 
 app.use(middleware.notFound);
 app.use(middleware.errorhandler);

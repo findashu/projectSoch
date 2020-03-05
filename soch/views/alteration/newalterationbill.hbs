@@ -1,0 +1,208 @@
+<h1 class="text-center">Alteration Bill</h1>
+
+<form action="/alterationdetails/alteration/create-new" method="POST" id="alterationcal">
+
+    <div class="form-row">
+
+
+        <div class="form-group col-md-4">
+            <label for="customername">Customer Name</label>
+            <input type="text" name="customername" class="form-control" id="customername" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="customernumber">Customer Number</label>
+            <input type="number" name="customernumber" class="form-control" id="customernumber" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="alias">Alteration No</label>
+            <input type="text" name="alias" class="form-control" id="alias" readonly>
+        </div>
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-4">
+            <label for="billno">Bill NO</label>
+            <input type="text" name="billno" class="form-control" id="billno" required>
+        </div>
+
+
+        <div class="form-group col-md-4">
+            <label for="billno">Bill Date</label>
+            <input type="date" name="billdate" class="form-control" id="billdate" required>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="duedate">Due Date</label>
+            <input type="date" name="duedate" class="form-control" id="duedate" required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-3 ml-2">
+            <label for="icode">Icode</label>
+            <input type="text" name="icode" class="form-control" id="icode">
+            <input type="text" name="icode1" class="form-control" id="icode">
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="qty">Qty</label>
+            <input type="number" name="qty" class="form-control" id="qty">
+            <input type="number" name="qty1" class="form-control" id="qty">
+
+        </div>
+
+        <div class="form-group col-md-3">
+            <label for="value">Value</label>
+            <input type="number" name="value" class="form-control" id="value">
+            <input type="number" name="value1" class="form-control" id="value">
+
+
+
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <label for="totalqty" class="col-sm-2 col-form-label">Total Qty</label>
+        <div class="col-sm-6">
+            <input type="number" name="totalqty" class="form-control" id="totalqty" readonly>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="totalvalue" class="col-sm-2 col-form-label">Total Value</label>
+        <div class="col-sm-6">
+            <input type="number" name="totalvalue" class="form-control" id="totalvalue" readonly>
+        </div>
+    </div>
+
+    <h3 class="text-center">Particulars</h3>
+    <div class="form-row">
+
+        <div class="form-group row ml-2">
+            <label for="lparticulars" class="col-sm-2 col-form-label col-form-label-sm">L</label>
+            <div class="col-sm-10">
+                <input type="text" name="lparticulars" class="form-control form-control-sm" id="lparticulars">
+            </div>
+        </div>
+
+        <div class="form-group row ml-2">
+            <label for="cparticulars" class="col-sm-2 col-form-label col-form-label-sm">C</label>
+            <div class="col-sm-10">
+                <input type="text" name="cparticulars" class="form-control form-control-sm" id="cparticulars">
+            </div>
+        </div>
+
+        <div class="form-group row ml-2">
+            <label for="wparticulars" class="col-sm-2 col-form-label col-form-label-sm">W</label>
+            <div class="col-sm-10">
+                <input type="text" name="wparticulars" class="form-control form-control-sm" id="wparticulars">
+            </div>
+        </div>
+
+        <div class="form-group row ml-2">
+            <label for="hparticulars" class="col-sm-2 col-form-label col-form-label-sm">H</label>
+            <div class="col-sm-10">
+                <input type="text" name="hparticulars" class="form-control form-control-sm" id="hparticulars">
+            </div>
+        </div>
+
+        <div class="form-group row ml-2">
+            <label for="shparticulars" class="col-sm-2 col-form-label col-form-label-sm">SH</label>
+            <div class="col-sm-10">
+                <input type="text" name="shparticulars" class="form-control form-control-sm" id="shparticulars">
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group row ml-2">
+            <label for="slparticulars" class="col-sm-2 col-form-label col-form-label-sm">SL</label>
+            <div class="col-sm-10">
+                <input type="text" name="slparticulars" class="form-control form-control-sm" id="slparticulars">
+            </div>
+        </div>
+
+        <div class="form-group row ml-2">
+            <label for="armparticulars" class="col-sm-2 col-form-label col-form-label-sm">ARM</label>
+            <div class="col-sm-10">
+                <input type="text" name="armparticulars" class="form-control form-control-sm" id="armparticulars">
+            </div>
+        </div>
+
+        <div class="form-group row ml-2">
+            <label for="ndparticulars" class="col-sm-2 col-form-label col-form-label-sm">ND</label>
+            <div class="col-sm-10">
+                <input type="text" name="ndparticulars" class="form-control form-control-sm" id="ndparticulars">
+            </div>
+        </div>
+
+        <div class="form-group row ml-2">
+            <label for="bdparticulars" class="col-sm-2 col-form-label col-form-label-sm">BD</label>
+            <div class="col-sm-10">
+                <input type="text" name="bdparticulars" class="form-control form-control-sm" id="bdparticulars">
+            </div>
+        </div>
+
+        <div class="form-group row ml-2">
+            <label for="fdparticulars" class="col-sm-2 col-form-label col-form-label-sm">FD</label>
+            <div class="col-sm-10">
+                <input type="text" name="fdparticulars" class="form-control form-control-sm" id="fdparticulars">
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group row ml-2">
+            <label for="bottomparticulars" class="col-sm-2 col-form-label col-form-label-sm">BOTTOM</label>
+            <div class="col-sm-10">
+                <input type="text" name="bottomparticulars" class="form-control form-control-sm" id="bottomparticulars">
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-row mb-2">
+            <label for="remarks" class="col-form-label">Remarks</label>
+            <div class="col-sm-4">
+                <textarea name="remarks" id="remarks" cols="61" rows="4"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group row ml-2">
+            <label for="authorisedby" class="col-sm-5 col-form-label">Authorised By</label>
+            <div class="col-sm-6">
+                <input type="text" name="authorisedby" class="form-control" id="authorisedby" required>
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <label for="authoriseddate" class="col-sm-5 col-form-label">Authorised Date</label>
+            <div class="col-sm-7">
+                <input type="date" name="authoriseddate" class="form-control" id="authoriseddate" required>
+            </div>
+
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-success mb-2">Submit</button>
+    <button type="submit" class="btn btn-danger mb-2">Cancel</button>
+</form>
+
+<script src="/js/alterationcal.js"></script>
