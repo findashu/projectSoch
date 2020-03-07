@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const Alteration = require('../models/alterationModel')
 const AlterationService = require("../services/alterationService");
 
 router.get("/", function(req, res, next) {
@@ -18,16 +19,23 @@ router.get("/alteration/create-new", function(req, res) {
   });
 });
 
-router.post("/alteration/create-new", function(req, res, next) {
-  let bodydata = req.body;
+router.post("/alteration/create-new", async function(req, res, next) {
+  let bodyData = req.body;
   // console.log(bodydata);
-  bodydata.alias = bodydata.customername
-    .split(" ")
-    .concat(bodydata.customernumber)
-    .join("-")
-    .toLowerCase();
+  // bodydata.alias = bodydata.customername
+  //   .split(" ")
+  //   .concat(bodydata.customernumber)
+  //   .join("-")
+  //   .toLowerCase();
 
-  AlterationService.createAlteration(bodydata)
+  let preData = await Alteration.find().sort({_id:-1}).limit(1);
+  console.log('preData ',preData)
+
+  let billNo = `ABCD-${Number(preData[0].billno.split('-')[1])+1}`;
+    
+  // bodyData.billno = `ABCD-${billNo}`;
+  bodyData.billno = billNo
+  AlterationService.createAlteration(bodyData)
     .then(dt => {
       res.redirect("/alterationdetails");
     })

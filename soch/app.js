@@ -20,7 +20,7 @@ mongoose
   .then(cnected => {
     console.log("DB Connected");
   })
-  .catch(err => console.log("Connection issuw with mongoDB"));
+  .catch(err => console.log("Connection issue with mongoDB"));
 
 app.set("views", __dirname + "/views");
 app.set("view engine", "hbs");
